@@ -1,0 +1,44 @@
+<template>
+  <header id="header">
+    <h1>{{ title }}</h1>
+  </header>
+</template>
+
+<script>
+export default {
+  name: "Header",
+  props: {
+    title: {
+      type: String,
+      default: "喵喵电影",
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+// scoped 代码只会在该组件中生效
+#header {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background: #e54847;
+  border-bottom: 1px solid #e54847;
+  position: relative;
+}
+
+#header h1 {
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: normal;
+}
+
+#header i {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  margin-top: -13px;
+  font-size: 26px;
+}
+</style>
